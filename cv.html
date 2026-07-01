@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marius Varasteanu - Complete CV Export</title>
+    <!-- Folosim Tailwind v3 Play CDN pentru a elimina complet culorile oklch -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        .page-break { page-break-before: always; }
+        .accordion-content { transition: max-height 0.2s ease-out; overflow: hidden; }
+        /* Stiluri de fallback standard pentru siguranta motorului de canvas */
+        #cv-content { background-color: #ffffff !important; color: #1f2937 !important; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+    <!-- Control Button -->
+    <div class="max-w-4xl mx-auto my-6 px-4 flex justify-end">
+        <button onclick="exportToPDF()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow transition cursor-pointer">
+            Save as PDF
+        </button>
+    </div>
+
+    <!-- Main Container for PDF -->
+    <div id="cv-content" class="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-md rounded-lg text-sm">
+        
+        <!-- HEADER -->
+        <div class="flex flex-col md:flex-row justify-between items-start border-b pb-6 border-gray-200">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Marius Varasteanu</h1>
+                <p class="text-xl text-blue-600 font-medium mt-1">Software Architect & Full Stack Developer</p>
+                <p class="text-gray-600 mt-2 max-w-2xl text-xs leading-relaxed">
+                    Experienced software engineering professional specializing in designing, building, and scaling robust web applications and enterprise solutions. Proficient in full-stack development, modern architectural patterns, and efficient system integration.
+                </p>
+            </div>
+            <div class="mt-4 md:mt-0 text-xs text-gray-600 space-y-1 md:text-right">
+                <p>office@cyberwave.ro</p>
+                <p>+40 735 088 734</p>
+                <p>Bucharest, Romania</p>
+                <p><a href="https://varasteanu.eu" class="text-blue-600 hover:underline">varasteanu.eu</a></p>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <div class="mt-8">
+            <h2 class="text-lg font-bold text-gray-900 uppercase tracking-wide border-b-2 border-gray-800 pb-1 mb-4">Professional Experience</h2>
+            
+            <!-- Job 1 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-base font-semibold text-gray-800">Senior Software Architect & Full Stack Developer</h3>
+                    <span class="text-xs text-gray-500 font-medium">2021 - Present</span>
+                </div>
+                <p class="text-xs italic text-gray-600">Independent Contractor / Consultant</p>
+                <p class="text-xs text-gray-700 mt-1">
+                    Directing end-to-end software engineering operations, managing full project lifecycles from architectural blueprints and system design to execution, deployment, and client delivery across diverse industries.
+                </p>
+                <ul class="list-disc list-inside mt-2 text-xs text-gray-600 space-y-1 pl-2">
+                    <li><strong>EdTech & Social Impact Platforms:</strong> Architected and scaled a global educational and networking ecosystem designed for high-traffic community engagement, interactive learning modules, and secure resource distribution.</li>
+                    <li><strong>InsurTech & Financial Systems:</strong> Designed robust architectures for insurance platforms, optimizing workflow automation, custom reporting engines, and secure data transactions.</li>
+                    <li><strong>CCaaS & Telephony:</strong> Developed custom Contact Center solutions and automated ticketing systems, improving response workflows and third-party integration metrics.</li>
+                    <li><strong>PropTech (Property Management):</strong> Engineered comprehensive real estate and facility management web applications optimizing administrative operations and billing modules.</li>
+                    <li><strong>Digital Asset Management:</strong> Built specialized applications for video production workflows, focusing on high-throughput data processing and performance optimization.</li>
+                    <li><strong>Technical Leadership:</strong> Leading technical decisions regarding cloud infrastructure, database modeling, and API integrations, ensuring high availability and clean codebases.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-base font-semibold text-gray-800">Web Developer / Junior/Mid Software Engineer</h3>
+                    <span class="text-xs text-gray-500 font-medium">2020 - 2021</span>
+                </div>
+                <p class="text-xs text-gray-700 mt-1">
+                    Kicked off my professional engineering career during my years of university, focusing on core web development and database implementations.
+                </p>
+                <ul class="list-disc list-inside mt-1 text-xs text-gray-600 space-y-1 pl-2">
+                    <li><strong>Application Development:</strong> Developed and maintained web applications utilizing native PHP, JavaScript, and MySQL, delivering robust modules based on technical specifications.</li>
+                    <li><strong>Database Foundations:</strong> Assisted in modeling relational databases, writing optimized SQL queries, and managing standard data migrations for local client projects.</li>
+                    <li><strong>Frontend Integration:</strong> Crafted responsive user interfaces using HTML5, CSS3, jQuery, and AJAX, ensuring seamless browser compatibility and backend API consumption.</li>
+                </ul>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-base font-semibold text-gray-800">IT Infrastructure & Systems Support Specialist</h3>
+                    <span class="text-xs text-gray-500 font-medium">2018 - 2020</span>
+                </div>
+                <p class="text-xs italic text-gray-600">Managed Service Provider (MSP) / Tech Outsourcing</p>
+                <ul class="list-disc list-inside mt-1 text-xs text-gray-600 space-y-1 pl-2">
+                    <li><strong>Microsoft Ecosystem Expertise:</strong> Administered, configured, and deployed Microsoft corporate solutions, Active Directory, cloud environments, and internal network assets for client firms.</li>
+                    <li><strong>Remote & Onsite Operations:</strong> Managed complex hardware and software incidents, transitioning operations into a high-efficiency remote deployment and remote monitoring model.</li>
+                    <li><strong>Client Outsourcing Management:</strong> Acted as the primary technical point of contact for multiple businesses, aligning IT infrastructure with client operational requirements.</li>
+                </ul>
+            </div>
+
+            <div class="page-break"></div>
+
+            <!-- Job 4 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-base font-semibold text-gray-800">Systems & Audio Technology Specialist</h3>
+                    <span class="text-xs text-gray-500 font-medium">2018</span>
+                </div>
+                <p class="text-xs italic text-gray-600">International Broadcasting Infrastructure</p>
+                <ul class="list-disc list-inside mt-1 text-xs text-gray-600 space-y-1 pl-2">
+                    <li><strong>Systems Engineering:</strong> Managed, configured, and monitored specialized audio and technical equipment for live international feeds under strict operational constraints.</li>
+                    <li><strong>Infrastructure Reliability:</strong> Ensured zero-downtime performance for global transmissions by diagnosing complex hardware bottlenecks and maintaining high-fidelity signal routing.</li>
+                </ul>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-base font-semibold text-gray-800">Software QA Specialist & IT Infrastructure Coordinator</h3>
+                    <span class="text-xs text-gray-500 font-medium">2017 - 2018</span>
+                </div>
+                <p class="text-xs italic text-gray-600">Tech Services Provider</p>
+                <ul class="list-disc list-inside mt-1 text-xs text-gray-600 space-y-1 pl-2">
+                    <li><strong>Software Quality Assurance:</strong> Executed complex test plans and performed functional/regression testing for high-profile software releases, maintaining strict stability benchmarks.</li>
+                    <li><strong>IT Operations:</strong> Directed the hardware and software maintenance cycle for internal systems, optimizing workstation performance and network availability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COMPLETE DEEP-DIVE ACCORDIONS -->
+        <div class="mt-8">
+            <h2 class="text-lg font-bold text-gray-900 uppercase tracking-wide border-b-2 border-gray-800 pb-1 mb-4">Deep-Dive: Key Architectural Solutions & Implementations</h2>
+            
+            <div class="space-y-2">
+                <!-- 1 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>Automated Bi-Monthly Recurring Payments Engine (QuickPay Integration)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Engineered a high-availability subscription and billing orchestration engine. Implemented robust state machines for fail-catch routing, automated transaction retries, and direct server-to-server webhook validation to guarantee asynchronous data alignment.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>National Legal & Fiscal Integrations (ANAF e-Factura Platform)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Designed and deployed native integration middleware for automatic XML/JSON data transformation and structural transmission to national fiscal authorities. Features internal validation pipelines and automated error recovery handling government server timeouts.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>Cryptographic Document Signing Systems (CertSign Automation)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Built secure automated backend workflows integrating hardware security modules and remote APIs for legally binding electronic signatures. Handles automatic PDF formatting, certificate validation chains, and secure cryptographic storage protocols.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>Automated Insurance Issuance Core (PAID Romania & Property Insurance)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Developed a secure brokerage sync API capable of executing real-time policy quotes and instantaneous digital policy issuance. Connected distributed web systems directly with institutional risk management clusters via SOAP/REST endpoints.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>Risk Assessment & Financial Intelligence Pipelines (KeysFin, ICAP & PEP)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Integrated compliance validation flows that extract and process corporate risk profiles, credit ratings, and politically exposed persons (PEP) databases. Designed automated triggers inside transaction orchestrators to minimize regulatory exposure.
+                        </div>
+                    </div>
+                </div>
+                <div class="page-break"></div>
+                <!-- 6 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>High-Performance Microservices API Architecture (Slim Framework Integration)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Architected lightweight PHP services utilizing Slim Framework optimized for low latency and high throughput. Refactored critical integration modules away from monolithic structures into clean, decoupled, unit-tested APIs.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>Enterprise Data Migration & ETL Engine (20-Year Legacy PostgreSQL Modernization)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Designed specialized extraction, transformation, and load (ETL) data pipelines to migrate decades of legacy relational data into normalized PostgreSQL schemas. Maintained continuous referential integrity with near-zero pipeline downtime during structural transitions.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>High-Volume Omnichannel Helpdesk & IVR Platform (800k+ Tickets Processed)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Built custom computer telephony integrations (CTI) hooking live IVR call metrics directly into centralized omnichannel dashboards. Optimised database search routines and index strategies to retrieve client data payloads instantly on live calls.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>Automated Financial & Bank Reconciliation Engine</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Developed autonomous routines that scan daily banking statements, parse incoming MT940/CAMT structures, and instantly clear internal accounting ledger entries. Drastically reduced human overhead and manual verification mistakes.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="border border-gray-200 rounded accordion-item">
+                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-3 bg-gray-50 hover:bg-gray-100 text-left font-semibold text-gray-800 cursor-pointer">
+                        <span>Legacy Ecosystem Refactoring & Security Hardening (CMS Ecosystems)</span>
+                        <span class="accordion-icon text-gray-500">+</span>
+                    </button>
+                    <div class="accordion-content max-h-0 bg-white px-4">
+                        <div class="py-2 text-xs text-gray-600 border-t border-gray-100">
+                            Audited and fortified vulnerable multi-tenant web systems. Deployed critical web application firewalls (WAF), removed persistent malware, refactored raw legacy SQL configurations against injection, and optimized historical cron task loads.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TECHNICAL EXPERTISE Grid -->
+        <div class="mt-8 pt-4 border-t border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 uppercase tracking-wide border-b-2 border-gray-800 pb-1 mb-4">Technical Expertise & Ecosystem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                <div>
+                    <p class="mb-2"><strong>Architecture & Design:</strong> System Design, Microservices, RESTful APIs, SOAP Web Services, Transaction Orchestration, State Machines (Fail-Catch), Omnichannel Architecture</p>
+                    <p class="mb-2"><strong>Backend Engineering:</strong> PHP Slim Framework, OOP & Clean Code, ETL Processes, Data Pipelines, Computer Telephony Integration (CTI/IVR)</p>
+                    <p class="mb-2"><strong>Data & Storage Layer:</strong> PostgreSQL, SQL Optimization, Database Refactoring, Data Transformation (JSON/XML), Caching Strategies, Referential Integrity</p>
+                </div>
+                <div>
+                    <p class="mb-2"><strong>Security & Compliance:</strong> Cryptographic Signatures, FinTech Gateway Integrations, Government API Integrations (ANAF), Risk Assessment & KYC Pipelines, Malware Remediation, Web Application Firewalls (WAF)</p>
+                    <p class="mb-2"><strong>Legacy Ecosystems & Tools:</strong> WordPress Custom Development, jQuery, Joomla Core Maintenance, Drupal Refactoring, PrestaShop Engineering, Git Version Control, Cron Job Optimization</p>
+                    <p class="mb-2"><strong>Front-End & UI Interaction:</strong> JavaScript (ES6+), CSS3 & HTML5, Responsive Web Design, Dynamic UI Components, AJAX / Async Data Fetching, DOM Manipulation</p>
+                </div>
+            </div>
+        </div>
+        <div class="page-break"></div>
+        <!-- EDUCATION -->
+        <div class="mt-8 pt-4 border-t border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 uppercase tracking-wide border-b-2 border-gray-800 pb-1 mb-2">Education</h2>
+            <p class="font-semibold text-gray-800">Bachelor of Science in Computer Science (Informatics)</p>
+            <p class="text-xs text-gray-500">Graduated 2021</p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="mt-12 pt-4 border-t border-gray-200 text-center text-xs text-gray-400">
+            &copy; 2026 Marius Varasteanu. All rights reserved. | Built collaborating with AI systems
+        </div>
+
+    </div>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.accordion-icon');
+            
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.textContent = '+';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.textContent = '-';
+            }
+        }
+
+        function exportToPDF() {
+            const element = document.getElementById('cv-content');
+            const contents = document.querySelectorAll('.accordion-content');
+            const icons = document.querySelectorAll('.accordion-icon');
+            
+            // Fortam deschiderea acordioanelor
+            contents.forEach(content => {
+                content.style.maxHeight = 'none'; 
+            });
+            icons.forEach(icon => {
+                icon.innerText = '-';
+            });
+
+            const opt = {
+                margin:       [10, 10, 10, 10],
+                filename:     'Marius_Varasteanu_Architecture_CV.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true, logging: false },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Generare PDF
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Inchidem acordioanele la loc pe ecran
+                contents.forEach(content => {
+                    content.style.maxHeight = '0px';
+                });
+                icons.forEach(icon => {
+                    icon.innerText = '+';
+                });
+                window.close()
+            }).catch(err => {
+                console.error("PDF generation failed:", err);
+            });
+        }
+    </script>
+</body>
+</html>
