@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varasteanu | Software Developer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Sections General */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* Tech Stack Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            padding: 0.3rem 0.7s;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Projects & Experience Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .card a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <h1>Prenume Varasteanu</h1>
+            <div class="subtitle">Software Developer / Web Designer</div>
+            <div class="links">
+                <a href="mailto:contact@varasteanu.eu">contact@varasteanu.eu</a>
+                <a href="https://github.com/username" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <!-- Despre mine -->
+        <section>
+            <h2>Despre Mine</h2>
+            <p>
+                Sunt un dezvoltator software pasionat de construirea de aplicatii web rapide, sigure si usor de utilizat. Am experienta in dezvoltarea de solutii software custom, baze de date si automatizari, fiind orientat pe scrierea de cod curat si optimizat.
+            </p>
+        </section>
+
+        <!-- Tehnologii / Abilitati -->
+        <section>
+            <h2>Tehnologii & Abilitati</h2>
+            <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">Python</span>
+                <span class="tag">SQL / MySQL</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Linux Server</span>
+            </div>
+        </section>
+
+        <!-- Proiecte recente -->
+        <section>
+            <h2>Proiecte Personale / Portofoliu</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/username/proiect1" target="_blank">Document Management System</a></div>
+                    <div class="card-date">Python, SQL</div>
+                </div>
+                <p>O aplicatie web custom conceputa pentru gestionarea rapida a documentelor, indexare eficienta si structurarea fisierelor intr-o baza de date relationala.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/username/proiect2" target="_blank">Automation Scripts & API Integrations</a></div>
+                    <div class="card-date">Python</div>
+                </div>
+                <p>Set de scripturi dezvoltat pentru automatizarea sarcinilor repetitive, parsarea datelor si sincronizarea informatiilor intre diverse platforme externe prin API-uri.</p>
+            </div>
+        </section>
+
+        <!-- Experienta Profesionala -->
+        <section>
+            <h2>Experienta</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Full Stack Developer & Business Owner</div>
+                    <div class="card-date">2020 - Prezent</div>
+                </div>
+                <p>Dezvoltare de aplicatii web, mentenanta baze de date si solutii IT personalizate pentru clienti de tip IMM. Coordonarea integrala a proiectelor, de la arhitectura pana la deployment.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Varasteanu. Gazduit gratuit pe GitHub Pages.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
