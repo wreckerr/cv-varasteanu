@@ -1,1 +1,1 @@
-console.log("Landing page-ul Varasteanu este functional!");
+console.log("Working Landing page with script.js");
