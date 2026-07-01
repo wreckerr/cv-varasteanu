@@ -1,90 +1,713 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marius Varasteanu | Software Developer</title>
+    <title>Marius Vărășteanu | Software Architect & Full Stack Developer</title>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome pentru iconite profesionale (mail, telefon, github) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fisierul tau CSS extern -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        
-        <!-- Header -->
-        <header>
-            <h1>Marius Varasteanu</h1>
-            <div class="subtitle">Software Developer / Web Designer</div>
-            <div class="links">
-                <a href="mailto:contact@varasteanu.eu">contact@varasteanu.eu</a>
-                <a href="https://github.com/username" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+    <!-- BUTON SCHIMBARE TEMA -->
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fa-solid fa-moon"></i>
+            <span id="theme-text">Dark Mode</span>
+        </button>
+    </div>
+
+    <div class="cv-container">
+        <!-- HEADER SECTION -->
+        <header class="cv-header">
+            <div class="header-main">
+                <div class="profile-title">
+                    <div class="cli-terminal-header">
+                        <h1 id="cli-name" class="cli-text"></h1>
+                        <h2 id="cli-title" class="cli-text"></h2>
+                    </div>
+                    <p class="profile-summary">
+                        Experienced software engineering professional specializing in designing, building, and scaling
+                        robust web applications and enterprise solutions. Proficient in full-stack development, modern
+                        architectural patterns, and efficient system integration.
+                    </p>
+                </div>
+
+                <!-- PLACEHOLDER PENTRU POZA -->
+                <div class="profile-image-container">
+                    <img src="img/profile-pic.jpg" alt="Marius Vărășteanu" class="profile-photo">
+                </div>
+            </div>
+
+            <!-- CONTACT BAR -->
+            <div class="contact-info">
+                <a href="mailto:office@cyberwave.ro"><i class="fa-regular fa-envelope"></i> office@cyberwave.ro</a>
+                <span><i class="fa-solid fa-phone"></i> <a href="tel:+40735088734">+40 735 088 734</a></span>
+                <span><i class="fa-solid fa-location-dot"></i> Bucharest, Romania</span>
+                <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/marius-v%C4%83r%C4%83%C8%99teanu-8b34b1129/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></span>
             </div>
         </header>
 
-        <!-- Despre mine -->
-        <section>
-            <h2>Despre Mine</h2>
-            <p>
-                Sunt un dezvoltator software pasionat de construirea de aplicatii web rapide, sigure si usor de utilizat. Am experienta in dezvoltarea de solutii software custom, baze de date si automatizari, fiind orientat pe scrierea de cod curat si optimizat.
-            </p>
-        </section>
+        <hr class="section-divider">
 
-        <!-- Tehnologii / Abilitati -->
-        <section>
-            <h2>Tehnologii & Abilitati</h2>
-            <div class="tags">
-                <span class="tag">PHP</span>
-                <span class="tag">Python</span>
-                <span class="tag">SQL / MySQL</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML5 / CSS3</span>
-                <span class="tag">Git / GitHub</span>
-                <span class="tag">REST APIs</span>
-                <span class="tag">Linux Server</span>
-            </div>
-        </section>
+        <!-- WORK IN PROGRESS - ZONA DE EXPERIENTA (URMEAZA SA O COMPLETAM) -->
+        <!-- EXPERIENTA PROFESIONALA -->
+        <main class="cv-content">
+            <section class="cv-section">
+                <h3><i class="fa-solid fa-briefcase"></i> Professional Experience</h3>
 
-        <!-- Proiecte recente -->
-        <section>
-            <h2>Proiecte Personale / Portofoliu</h2>
-            
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://github.com/username/proiect1" target="_blank">Document Management System</a></div>
-                    <div class="card-date">Python, SQL</div>
+                <div class="timeline">
+                    <!-- ROLUL PRINCIPAL (2018 - PRESENT) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="role-title">
+                                <h4>Senior Software Architect & Full Stack Developer</h4>
+                                <h5>Independent Contractor / Consultant</h5>
+                            </div>
+                            <span class="timeline-date">2021 - Present</span>
+                        </div>
+
+                        <div class="timeline-body">
+                            <p class="role-summary-text">
+                                Directing end-to-end software engineering operations, managing full project lifecycles
+                                from architectural blueprints and system design to execution, deployment, and client
+                                delivery across diverse industries.
+                            </p>
+
+                            <ul class="role-bullets">
+                                <li><strong>EdTech & Social Impact Platforms:</strong> Architected and scaled a global
+                                    educational and networking ecosystem designed for high-traffic community engagement,
+                                    interactive learning modules, and secure resource distribution.</li>
+                                <li><strong>InsurTech & Financial Systems:</strong> Designed robust architectures for
+                                    insurance platforms, optimizing workflow automation, custom reporting engines, and
+                                    secure data transactions.</li>
+                                <li><strong>CCaaS & Telephony:</strong> Developed custom Contact Center solutions and
+                                    automated ticketing systems, improving response workflows and third-party
+                                    integration metrics.</li>
+                                <li><strong>PropTech (Property Management):</strong> Engineered comprehensive real
+                                    estate and facility management web applications optimizing administrative operations
+                                    and billing modules.</li>
+                                <li><strong>Digital Asset Management:</strong> Built specialized applications for video
+                                    production workflows, focusing on high-throughput data processing and performance
+                                    optimization.</li>
+                                <li><strong>Technical Leadership:</strong> Leading technical decisions regarding cloud
+                                    infrastructure, database modeling, and API integrations, ensuring high availability
+                                    and clean codebases.</li>
+                            </ul>
+
+                            <!-- ACCORDION SHOWCASE PENTRU REUSITE TOP -->
+                            <div class="architecture-showcase">
+                                <h5 class="showcase-title">Deep-Dive: Key Architectural Solutions & Implementations</h5>
+
+                                <!-- Caseta 1: Plati QuickPay -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-credit-card icon-lead"></i>
+                                            <strong>Automated Bi-Monthly Recurring Payments Engine</strong> (QuickPay
+                                            Integration)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Designed and deployed a highly reliable payment automation engine
+                                                handling bi-monthly recurring billing structures based on dynamic client
+                                                service quotas.</p>
+                                            <ul>
+                                                <li><strong>Fail-Catch Architecture:</strong> Developed a custom
+                                                    retry-and-recovery state machine that handles transaction drops,
+                                                    temporary gateway timeouts, and card issues, preventing service
+                                                    interruption.</li>
+                                                <li><strong>Data Pipelines:</strong> Constructed secure RESTful APIs
+                                                    parsing clean JSON payloads to track subscription life cycles and
+                                                    transaction ledgers with full mathematical precision.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 2: ANAF e-Factura -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-building-columns icon-lead"></i>
+                                            <strong>National Legal & Fiscal Integrations</strong> (ANAF e-Factura
+                                            Platform)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Engineered automated compliance modules interfacing directly with
+                                                Romanian fiscal systems (ANAF) for B2B and B2G billing ecosystems.</p>
+                                            <ul>
+                                                <li><strong>Data Transformation:</strong> Developed high-performance
+                                                    translation layers converting legacy internal data arrays into
+                                                    strictly structured XML structures conforming to national electronic
+                                                    invoicing schemas.</li>
+                                                <li><strong>State Synchronization:</strong> Implemented cron-driven
+                                                    queues to poll government API endpoints, securely download zip
+                                                    archives, index system responses, and map validation tokens
+                                                    instantly to client dashboards.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 3: CertSign -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-file-signature icon-lead"></i>
+                                            <strong>Cryptographic Document Signing Systems</strong> (CertSign
+                                            Automation)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Architected a fully automated, zero-touch digital signing solution for
+                                                legally binding contractual documents and insurance policies.</p>
+                                            <ul>
+                                                <li><strong>Security Protocols:</strong> Integrated dedicated
+                                                    third-party APIs (CertSign) to apply advanced digital signatures
+                                                    automatically upon document generation.</li>
+                                                <li><strong>Workflow Automation:</strong> Combined PDF generation
+                                                    microservices, secure cryptographic payloads, and instant cloud
+                                                    archiving to deliver signed files to end-users without manual staff
+                                                    intervention.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 4: PAID Romania & Asigurari Facultative -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-house-circle-check icon-lead"></i>
+                                            <strong>Automated Insurance Issuance Core</strong> (PAID Romania & Property
+                                            Insurance)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Designed a unified transactional workflow interfacing directly with PAID
+                                                Romania for the mandatory issuance of residential insurance policies,
+                                                later scaling the engine to handle complex optional property insurance
+                                                products.</p>
+                                            <ul>
+                                                <li><strong>Modular API Architecture:</strong> Engineered an extensible
+                                                    adapter pattern capable of transforming heterogeneous client data
+                                                    into specific SOAP/REST schemas required by national pool protocols.
+                                                </li>
+                                                <li><strong>Validation & Error Mitigation:</strong> Implemented precise
+                                                    address-matching logic and real-time validation layers to catch data
+                                                    anomalies before hitting national insurance databases, dropping
+                                                    processing errors to a minimum.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 5: KeysFin, ICAP & PEP -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-magnifying-glass-chart icon-lead"></i>
+                                            <strong>Risk Assessment & Financial Intelligence Pipelines</strong>
+                                            (KeysFin, ICAP & PEP)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Architected automated background screening and financial profiling tools
+                                                for third-party corporate entities and high-value individuals.</p>
+                                            <ul>
+                                                <li><strong>Financial Data Aggregation:</strong> Built multi-source API
+                                                    connectors targeting KeysFin and ICAP databases to dynamically
+                                                    scrape, normalize, and cache extensive fiscal data, balance sheets,
+                                                    and company risk scores.</li>
+                                                <li><strong>Compliance Verification:</strong> Integrated real-time
+                                                    automated PEP (Politically Exposed Persons) checks and sanction list
+                                                    polling to automate KYC (Know Your Customer) and AML (Anti-Money
+                                                    Laundering) requirements directly inside the enterprise workflow.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 6: Slim API Architecture -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-network-wired icon-lead"></i>
+                                            <strong>High-Performance Microservices API Architecture</strong> (Slim
+                                            Framework Integration)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Designed and optimized a lightweight, high-throughput RESTful API using
+                                                the Slim micro-framework to expose insurance quotation and policy
+                                                issuance pipelines effortlessly to third-party partner applications.</p>
+                                            <ul>
+                                                <li><strong>Complex Method Orchestration:</strong> Engineered a
+                                                    transactional pipeline executing up to 7 distinct, sequential method
+                                                    calls per single lifecycle operation—managing interdependent
+                                                    input/output parameters, strict status transitions, and data
+                                                    integrity.</li>
+                                                <li><strong>Scalability & Performance:</strong> Built a decoupled
+                                                    architecture capable of handling intensive daily volumes (500+
+                                                    completely processed policies/day) with low latency, utilizing
+                                                    efficient request parsing and error mitigation strategies.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 7: PostgreSQL Legacy Migration -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-database icon-lead"></i>
+                                            <strong>Enterprise Data Migration & ETL Engine</strong> (20-Year Legacy
+                                            PostgreSQL Modernization)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Spent over a year architecting, auditing, and refining a massive data
+                                                migration and ETL strategy designed to phase out a monolithic platform
+                                                built in 2001 and transition all operations to a modern ecosystem.</p>
+                                            <ul>
+                                                <li><strong>Complex Schema Re-engineering:</strong> Dedicated months to
+                                                    reverse-engineering the legacy database structure without
+                                                    documentation, mapping and normalizing 20 years of continuous
+                                                    workload including interconnected entities (users, clients,
+                                                    quotations, policies, payment ledgers, and custom audit trails).
+                                                </li>
+                                                <li><strong>High-Performance Execution:</strong> Engineered a
+                                                    single-execution PostgreSQL pipeline optimized with precise
+                                                    transaction batching and custom staging tables. The final automated
+                                                    deployment executed flawlessly in exactly 1:48:50 hours, achieving
+                                                    zero data loss and total referential integrity.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 8: Omnichannel Ticketing & IVR Engine -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-headset icon-lead"></i>
+                                            <strong>High-Volume Omnichannel Helpdesk & IVR Platform</strong> (800k+
+                                            Tickets Processed)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Architected and developed an enterprise-grade omnichannel ticketing
+                                                system that has successfully processed, routed, and managed over 800,000
+                                                operational events since 2021.</p>
+                                            <ul>
+                                                <li><strong>Telephony & IVR Integration:</strong> Developed custom
+                                                    interfaces connecting with digital private branch exchange (PBX)
+                                                    systems, automating ticket generation and routing based on real-time
+                                                    IVR (Interactive Voice Response) key-press inputs from phone calls.
+                                                </li>
+                                                <li><strong>Multi-Channel Aggregation:</strong> Engineered
+                                                    high-availability API consumers and ingestion webhooks to unify
+                                                    entry channels, letting the system process tickets seamlessly
+                                                    whether they were created manually by agents, via external REST
+                                                    APIs, or through automated telephony events.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 9: Payment Reconciliation Engine -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-scale-balanced icon-lead"></i>
+                                            <strong>Automated Financial & Bank Reconciliation Engine</strong>
+                                            (Accounting overheat reduction)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Designed and integrated an automated financial reconciliation system that
+                                                processes bank statements to match incoming ledger transactions with
+                                                internal invoices, policies, and premium records.</p>
+                                            <ul>
+                                                <li><strong>Multi-Format Ingestion Pipelines:</strong> Built
+                                                    high-resiliency parsing modules handling heterogeneous data streams
+                                                    from banking formats including CSV, TXT, XLS, and standard SWIFT
+                                                    MT940 statement structures.</li>
+                                                <li><strong>Algorithmic Matching:</strong> Developed a flexible
+                                                    transaction-matching state machine that dynamically aligns bank
+                                                    settlement metadata with the core subscription and billing systems,
+                                                    eliminating manual financial accounting overhead.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Caseta 10: Legacy CMS Remediation & Cybersecurity -->
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <span class="header-text">
+                                            <i class="fa-solid fa-shield-halved icon-lead"></i>
+                                            <strong>Legacy Ecosystem Refactoring & Security Hardening</strong> (CMS
+                                            Ecosystems)
+                                        </span>
+                                        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="content-inner">
+                                            <p>Managed, optimized, and secured a diverse array of enterprise web
+                                                properties built on monolithic content management systems, focusing on
+                                                deep source-code refactoring and incident response.</p>
+                                            <ul>
+                                                <li><strong>Malware Remediation & Cybersecurity:</strong> Led urgent
+                                                    security auditing and malware removal operations across compromised
+                                                    setups, tracking down malicious payloads, cleaning core source
+                                                    files, and implementing proactive web application firewalls (WAF).
+                                                </li>
+                                                <li><strong>Full-Stack CMS Engineering:</strong> Developed custom
+                                                    themes, modules, and ongoing architectural enhancements from scratch
+                                                    for high-volume deployments across WordPress, Joomla, Drupal, and
+                                                    PrestaShop, maintaining backward compatibility while modernizing
+                                                    base infrastructure.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tech-tags mt-20">
+                                <span>Architecture</span>
+                                <span>Slim Framework</span>
+                                <span>PostgreSQL & SQL ETL</span>
+                                <span>Cybersecurity & CMS Hardening</span>
+                                <span>Financial Reconciliation</span>
+                                <span>RESTful & SOAP APIs</span>
+                                <span>Telephony & IVR Integration</span>
+                                <span>Payment Systems</span>
+                                <span>Cryptographic Signing</span>
+                                <span>Data Pipelines (JSON/XML)</span>
+                                <span>Transaction Orchestration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="role-title">
+                                <h4>Web Developer</h4>
+                                <h5>Junior/Mid Software Engineer</h5>
+                            </div>
+                            <span class="timeline-date">2020 - 2021</span>
+                        </div>
+                        
+                        <div class="timeline-body">
+                            <p class="role-summary-text">
+                                Kicked off my professional engineering career during my years of university, focusing on core web development and database implementations.
+                            </p>
+                            <ul class="role-bullets">
+                                <li><strong>Application Development:</strong> Developed and maintained web applications utilizing native PHP, JavaScript, and MySQL, delivering robust modules based on technical specifications.</li>
+                                <li><strong>Database Foundations:</strong> Assisted in modeling relational databases, writing optimized SQL queries, and managing standard data migrations for local client projects.</li>
+                                <li><strong>Frontend Integration:</strong> Crafted responsive user interfaces using HTML5, CSS3, jQuery, and AJAX, ensuring seamless browser compatibility and backend API consumption.</li>
+                            </ul>
+                            <div class="tech-tags mt-10">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>jQuery</span>
+                                <span>HTML5 & CSS3</span>
+                                <span>AJAX</span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <!-- ROL: IT SUPPORT & CONSULTING (2018 - 2020) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="role-title">
+                                <h4>IT Infrastructure & Systems Support Specialist</h4>
+                                <h5>Managed Service Provider (MSP) / Tech Outsourcing</h5>
+                            </div>
+                            <span class="timeline-date">2018 - 2020</span>
+                        </div>
+
+                        <div class="timeline-body">
+                            <p class="role-summary-text">
+                                Delivered comprehensive onsite and remote IT support and systems engineering services
+                                for a diverse portfolio of corporate clients, managing full infrastructure optimization
+                                and client service-level agreements (SLAs).
+                            </p>
+                            <ul class="role-bullets">
+                                <li><strong>Microsoft Ecosystem Expertise:</strong> Administered, configured, and
+                                    deployed Microsoft corporate solutions, Active Directory, cloud environments, and
+                                    internal network assets for client firms.</li>
+                                <li><strong>Remote & Onsite Operations:</strong> Managed complex hardware and software
+                                    incidents, transitioning operations into a high-efficiency remote deployment and
+                                    remote monitoring model.</li>
+                                <li><strong>Client Outsourcing Management:</strong> Acted as the primary technical point
+                                    of contact for multiple businesses, aligning IT infrastructure with client
+                                    operational requirements.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Systems Administration</span>
+                                <span>Microsoft Solutions</span>
+                                <span>Remote Engineering</span>
+                                <span>IT Outsourcing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROL: SYSTEMS & AUDIO TECH (2018) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="role-title">
+                                <h4>Systems & Audio Technology Specialist</h4>
+                                <h5>International Broadcasting Infrastructure</h5>
+                            </div>
+                            <span class="timeline-date">2018</span>
+                        </div>
+
+                        <div class="timeline-body">
+                            <p class="role-summary-text">
+                                Engineered and maintained mission-critical technical infrastructures for live media
+                                production, focusing on hardware integration, signal integrity, and high-availability
+                                operations.
+                            </p>
+                            <ul class="role-bullets">
+                                <li><strong>Systems Engineering:</strong> Managed, configured, and monitored specialized
+                                    audio and technical equipment for live international feeds under strict operational
+                                    constraints.</li>
+                                <li><strong>Infrastructure Reliability:</strong> Ensured zero-downtime performance for
+                                    global transmissions by diagnosing complex hardware bottlenecks and maintaining
+                                    high-fidelity signal routing.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Systems Engineering</span>
+                                <span>Signal Processing</span>
+                                <span>Hardware Integration</span>
+                                <span>Real-Time Ops</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROL: QA & IT SYSTEMS (2017 - 2018) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="role-title">
+                                <h4>Software QA Specialist & IT Infrastructure Coordinator</h4>
+                                <h5>Tech Services Provider</h5>
+                            </div>
+                            <span class="timeline-date">2017 - 2018</span>
+                        </div>
+
+                        <div class="timeline-body">
+                            <p class="role-summary-text">
+                                Ensured product quality for large-scale enterprise software initiatives while managing
+                                internal hardware and software lifecycle operations.
+                            </p>
+                            <ul class="role-bullets">
+                                <li><strong>Software Quality Assurance:</strong> Executed complex test plans and
+                                    performed functional/regression testing for high-profile software releases,
+                                    maintaining strict stability benchmarks.</li>
+                                <li><strong>IT Operations:</strong> Directed the hardware and software maintenance cycle
+                                    for internal systems, optimizing workstation performance and network availability.
+                                </li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Quality Assurance</span>
+                                <span>IT Operations</span>
+                                <span>Hardware Management</span>
+                                <span>Troubleshooting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- ROLUL ANTERIOR (2016 - 2018) -->
+                   
+
+                    
+
                 </div>
-                <p>O aplicatie web custom conceputa pentru gestionarea rapida a documentelor, indexare eficienta si structurarea fisierelor intr-o baza de date relationala.</p>
-            </div>
+            </section>
+                        <hr class="section-divider">
 
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://github.com/username/proiect2" target="_blank">Automation Scripts & API Integrations</a></div>
-                    <div class="card-date">Python</div>
+            <!-- SECTION: EDUCATION -->
+            <section class="education-section mt-50">
+                <h3 class="section-title">Education</h3>
+                <div class="education-card">
+                    <div class="edu-header">
+                        <div class="edu-title">
+                            <h4>Bachelor of Science in Computer Science (Informatics)</h4>
+                            <h5>Computer Science</h5>
+                        </div>
+                        <span class="edu-date">Graduated 2021</span>
+                    </div>
                 </div>
-                <p>Set de scripturi dezvoltat pentru automatizarea sarcinilor repetitive, parsarea datelor si sincronizarea informatiilor intre diverse platforme externe prin API-uri.</p>
-            </div>
-        </section>
+            </section>
+            <hr class="section-divider">
+            <!-- SECTION: TECHNICAL SKILLS -->
+            <section class="skills-section mt-50">
+                <h3 class="section-title">Technical Expertise & Ecosystem</h3>
+                
+                <div class="skills-grid">
+                    <!-- Card 1: Core Architecture -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-diagram-project card-icon"></i>
+                            <h4>Architecture & Design</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>System Design</span>
+                            <span>Microservices</span>
+                            <span>RESTful APIs</span>
+                            <span>SOAP Web Services</span>
+                            <span>Transaction Orchestration</span>
+                            <span>State Machines (Fail-Catch)</span>
+                            <span>Omnichannel Architecture</span>
+                        </div>
+                    </div>
 
-        <!-- Experienta Profesionala -->
-        <section>
-            <h2>Experienta</h2>
-            
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title">Full Stack Developer & Business Owner</div>
-                    <div class="card-date">2020 - Prezent</div>
+                    <!-- Card 2: Backend & Systems -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-code card-icon"></i>
+                            <h4>Backend Engineering</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>PHP</span>
+                            <span>Slim Framework</span>
+                            <span>OOP & Clean Code</span>
+                            <span>Data Pipelines</span>
+                            <span>ETL Processes</span>
+                            <span>Computer Telephony Integration (CTI/IVR)</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Database & Storage -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-database card-icon"></i>
+                            <h4>Data & Storage Layer</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>PostgreSQL</span>
+                            <span>SQL Optimization</span>
+                            <span>Database Refactoring</span>
+                            <span>Data Transformation (JSON/XML)</span>
+                            <span>Caching Strategies</span>
+                            <span>Referential Integrity</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Security & Integrations -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-shield-halved card-icon"></i>
+                            <h4>Security & Compliance</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>Cryptographic Signatures</span>
+                            <span>FinTech Gateway Integrations</span>
+                            <span>Government API Integrations (ANAF)</span>
+                            <span>Risk Assessment & KYC Pipelines</span>
+                            <span>Malware Remediation</span>
+                            <span>Web Application Firewalls (WAF)</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Infrastructure & CMS Systems -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-cubes card-icon"></i>
+                            <h4>Legacy Ecosytems & Tools</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>WordPress Custom Development</span>
+                            <span>Joomla Core Maintenance</span>
+                            <span>Drupal Refactoring</span>
+                            <span>PrestaShop Engineering</span>
+                            <span>Git Version Control</span>
+                            <span>Cron Job Optimization</span>
+                        </div>
+                    </div>
+                    <!-- Card 6: Front-End UI & Interaction -->
+                    <div class="skills-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-window-restore card-icon"></i>
+                            <h4>Front-End & UI Interaction</h4>
+                        </div>
+                        <div class="card-tags">
+                            <span>JavaScript (ES6+)</span>
+                            <span>jQuery</span>
+                            <span>CSS3 & HTML5</span>
+                            <span>Responsive Web Design</span>
+                            <span>Dynamic UI Components</span>
+                            <span>AJAX / Async Data Fetching</span>
+                            <span>DOM Manipulation</span>
+                        </div>
+                    </div>
                 </div>
-                <p>Dezvoltare de aplicatii web, mentenanta baze de date si solutii IT personalizate pentru clienti de tip IMM. Coordonarea integrala a proiectelor, de la arhitectura pana la deployment.</p>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Varasteanu. Gazduit gratuit pe GitHub Pages.</p>
-        </footer>
-
+            </section>
+        </main>
+        
     </div>
 
-<script src="js/script.js"></script>
+    
+
+
+    <!-- BUTON BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Fisierul tau JS extern -->
+    <script src="js/script.js"></script>
 </body>
+
+<!-- FOOTER SECTION -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>© 2026 Marius Vărășteanu. All rights reserved.</p>
+        <p class="footer-meta">
+            <span><i class="fa-brands fa-github"></i> Hosted on <strong>GitHub Pages</strong></span>
+            <span class="meta-separator">|</span>
+            <span><i class="fa-solid fa-robot"></i> Built collaborating with <strong>AI systems</strong></span>
+        </p>
+    </div>
+</footer>
+
 </html>
